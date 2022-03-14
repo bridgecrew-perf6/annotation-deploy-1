@@ -1,8 +1,11 @@
 variable "name" {
   default = "tf-ann"
 }
-variable "profile" {
+variable "instance_profile" {
   default = "bx2-2x8"
+}
+variable "volume_profile" {
+  default = "general-purpose"
 }
 variable "volume_capacity" {
   default = "1000"
