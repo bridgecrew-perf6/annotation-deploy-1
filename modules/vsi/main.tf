@@ -22,7 +22,7 @@ resource "ibm_is_volume" "vol" {
   name     = "${var.name}-storage-${var.volume_capacity}gb"
   profile  = "general-purpose"
   # profile  = "10iops-tier"
-  zone     = "us-south-1"
+  zone     = "us-south-2"
   capacity = var.volume_capacity
 }
 resource "ibm_is_floating_ip" "fip" {
