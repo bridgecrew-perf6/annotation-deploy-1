@@ -14,6 +14,8 @@ user_name = "forome"
 disk_name = "/dev/vdd"
 volume_profile = "general-purpose"
 volume_capacity = "1000"
+ssh_key_name = "terraform-ssh"
+ssh_key_public_file = "~/.ssh/forome/id_rsa.pub"
 ```
 
 Deploy with terraform:

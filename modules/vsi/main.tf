@@ -20,11 +20,11 @@ resource "ibm_is_instance" "vsi" {
   resource_group = var.resource_group
   vpc            = var.vpc
   zone           = var.zone
-  # keys           = [var.ssh_key_id]
-  keys           = ["r006-93f8ced5-71d5-4540-887f-c560b7c66154"]
-  image          = data.ibm_is_image.ubuntu.id
   profile        = var.instance_profile
-  user_data = data.template_file.user_data.rendered
+  keys           = [var.ssh_key_id]
+  # keys           = ["r006-93f8ced5-71d5-4540-887f-c560b7c66154"]
+  image          = data.ibm_is_image.ubuntu.id
+  user_data      = data.template_file.user_data.rendered
   boot_volume {
     name         = "${var.instance_name}-boot"
   }

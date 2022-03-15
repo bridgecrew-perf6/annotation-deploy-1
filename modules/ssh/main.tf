@@ -1,19 +1,13 @@
-# resource "tls_private_key" "key" {
-#   algorithm = "RSA"
-#   rsa_bits  = 4096
-# }
-# resource "local_file" "private_key" {
-#   filename          = "${path.module}/.ssh/id_rsa"
-#   sensitive_content = tls_private_key.key.private_key_pem
-#   file_permission   = "0400"
-# }
-
 locals {
-  public_key = file(pathexpand("${path.module}/.ssh/id_rsa.pub"))
+  # public_key = file(pathexpand(var.ssh_key_public_file))
+  public_key = file(pathexpand(".ssh/id_rsa.pub"))
 }
-resource "ibm_is_ssh_key" "iac_shared_ssh_key" {
-  name = "tf-ssh"
+resource "ibm_is_ssh_key" "ssh_public_key" {
+  # lifecycle {
+  #   prevent_destroy = true
+  #   ignore_changes = [ public_key ]
+  # }
+  name = var.ssh_key_name
   resource_group = var.resource_group
   public_key = local.public_key
-#   public_key = tls_private_key.key.public_key_openssh
 }

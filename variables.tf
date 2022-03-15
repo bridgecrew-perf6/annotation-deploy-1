@@ -26,7 +26,7 @@ variable "instance_name" {
   default = "forome-annotation"
 }
 variable "instance_profile" {
-  default = "bx2-2x8"
+  default = "bx2-4x16"
 }
 variable "user_name" {
   default = "forome"
@@ -39,4 +39,10 @@ variable "volume_profile" {
 }
 variable "volume_capacity" {
   default = "1000"
+}
+variable "ssh_key_name" {
+  default = "terraform-ssh"
+}
+variable "ssh_key_public_file" {
+  default = "~/.ssh/id_rsa.pub"
 }

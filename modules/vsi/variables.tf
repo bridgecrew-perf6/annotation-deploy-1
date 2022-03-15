@@ -10,4 +10,4 @@ variable "security_group" {}
 variable "resource_group" {}
 variable "user_name" {}
 variable "disk_name" {}
-# variable "ssh_key_id" {}
+variable "ssh_key_id" {}
