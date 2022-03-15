@@ -23,7 +23,7 @@ variable "security_group" {
   default = "r006-232af301-0d00-4d1e-98be-d37427e83cce"
 }
 variable "instance_name" {
-  default = "tf-ann"
+  default = "forome-annotation"
 }
 variable "instance_profile" {
   default = "bx2-2x8"
