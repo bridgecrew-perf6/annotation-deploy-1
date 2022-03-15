@@ -5,24 +5,17 @@ bootcmd:
 - printf 'g\nn\n1\n\n\nw' | fdisk ${disk_name}
 - mkfs.ext4 ${disk_name}1 -L data
 mounts:
-- [ "LABEL=data", "/data", "ext4", "defaults,discard", "0", "0" ]
+- [ "LABEL=data", "/data", "ext4", "defaults", "0", "0" ]
 packages:
 - vim
 - tmux
-- git
-- curl
-- wget
-- rsync
-- rclone
-- pv
-- net-tools
 package_update: true
 package_upgrade: true
 package_reboot_if_required: true
 users:
 - default
 - name: ${user_name}
-  uid: '1001'
+  shell: '/bin/bash'
   sudo: ['ALL=(ALL:ALL) NOPASSWD:ALL']
   ssh-authorized-keys:
     - 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDgBuNkMFWh8CK5ON4j9UPlTD7B9e0HQaW8OrFkG06Jl9jCICHhyfzNDDAgt8q0HVBcCfsygC2l/O9qR35WJKIKxDmaDTUBSBEAWLCBz33pZ44+/yFjOrSj8k0fdVtH6cBOI/LF8NxepEESpDzmMdbblvCXV3SbUfcd1rCQoR6JcaSZr2BiuLe9nfm5hmjHkA7+eh8B6qXucvQIWFcALKzAsYsHvuxdfu8CYrtEUCgyPjcyYxHfM49MV1JJK53XBcuSUQSZ7yRjXPEDp0YMPmq/Z379PGAYkEee/Ia1m2txvcUMtaswcsK9cirzDmHrOLwVFTlV3Xf10Bjt3ybpqSOWVr6zqHTQCOjm++7sIplftzQCEkDTBVM6IflIc5K9r5CKmCBDMraKLX+rVMshNRno5h5Xuo05+rUq2Ab892LOu++0Bylw0fTWlxqHbICdEAuDkCpgUDqP24UTsoBIo8rWC7HMnwzFDXyMoOc2pB8tstzppLNGHXaUmnwBUtv6mIk= nikita.kapishev'
