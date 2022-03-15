@@ -8,7 +8,7 @@ variable "zone" {
 }
 variable "resource_group" {
   description = "asset-forome"
-  default     = "36431c4040924be6bad4306be499b281"
+  default = "36431c4040924be6bad4306be499b281"
 }
 variable "vpc" {
   description = "asset-forome"
@@ -21,4 +21,22 @@ variable "subnet" {
 variable "security_group" {
   description = "anything-swab-grass-aide"
   default = "r006-232af301-0d00-4d1e-98be-d37427e83cce"
+}
+variable "instance_name" {
+  default = "tf-ann"
+}
+variable "instance_profile" {
+  default = "bx2-2x8"
+}
+variable "user_name" {
+  default = "forome"
+}
+variable "disk_name" {
+  default = "/dev/vdd"
+}
+variable "volume_profile" {
+  default = "general-purpose"
+}
+variable "volume_capacity" {
+  default = "1000"
 }

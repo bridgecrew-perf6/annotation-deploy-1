@@ -13,7 +13,7 @@ crash.log
 #
 *.tfvars
 # Sensitive data
-ssh_keypair/*
+**/.ssh/*
 **/id_rsa*
 **/*.pem
 **/*.pub
