@@ -32,3 +32,8 @@ terraform init -upgrade
 terraform apply -auto-approve
 terraform apply -destroy -auto-approve
 ```
+
+Connect to instance:
+```
+ssh -i $YOUR_SSH_PRIVATE_KEY $USER_NAME@$INSTANCE_EXTERNAL_IP
+```

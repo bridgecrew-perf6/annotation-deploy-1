@@ -14,5 +14,5 @@ output "volume_capacity" {
   value = module.vsi.volume_capacity
 }
 output "ssh_key_public_file" {
-   value = var.ssh_key_public_file
+  value = var.ssh_key_public_file
 }
