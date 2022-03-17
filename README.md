@@ -1,4 +1,4 @@
-# Deploy Infrastructure for annotation in IBM Cloud
+# Deploy annotation service in IBM Cloud
 
 [Setup Terraform Environment for IBM Cloud](https://ibm.github.io/cloud-enterprise-examples/iac/setup-environment)
 
